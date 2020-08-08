@@ -13,6 +13,7 @@
 /* цвет фона в футере #2F303A */
 /* цвет рамки списка портфолио #EEEEEE */
 /* цвет иконок соцсетей в каточках our team #AFB1B8 */
+/* цвет нижней границы header #ececec */
 
 /* шрифты
 лого font-family: Raleway; font-weight: bold
@@ -43,6 +44,7 @@
   --portfolio-list-hidden-color: rgba(33, 150, 243, 0.9);
   --portfolio-list-border-color: #eeeeee;
   --links-icon-basic-color: #afb1b8;
+  --header-border-color: #ececec;
 }
 
 /* Стили для index.html */
@@ -82,6 +84,10 @@
 }
 
 /* Header section */
+.header {
+  border-bottom: 1px solid var(--header-border-color);
+}
+
 .page-header {
   display: flex;
   align-items: center;
@@ -502,18 +508,13 @@
 
 .footer .social-link-list {
   display: flex;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
+}
+
+.footer .social-link-item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .footer .social-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
   background-color: var(--footer-social-links-background-color);
 }
 
