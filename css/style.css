@@ -47,6 +47,8 @@
   --links-icon-basic-color: #afb1b8;
   --header-border-color: #ececec;
   --backdrop-background-color: rgba(0, 0, 0, 0.2);
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-duration: 250ms;
 }
 
 /* Стили для index.html */
@@ -757,12 +759,13 @@
   height: 100%;
 
   background: var(--backdrop-background-color);
+  transform: scale(1);
+  transition: transform var(--transition-duration) var(--timing-function);
 }
 
 .backdrop.is-hidden {
-  visibility: hidden;
-  opacity: 0;
   pointer-events: none;
+  transform: scale(0);
 }
 
 .modal {
